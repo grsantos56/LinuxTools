@@ -31,7 +31,7 @@ O **Linux Tools** é um gerenciador de pacotes criado para facilitar a instalaç
 
 #### 🌍 Navegadores
 - `chrome` - Navegador mais utilizado do mundo.
-- `opera`, `opera-gx` – Navegadores da Opera (GX é voltado para gamers).
+- `opera` – Navegadores da Opera (GX é voltado para gamers).
 - `brave` – Navegador com bloqueador de anúncios embutido.
 
 #### ✉️ Redes Sociais
