@@ -117,3 +117,29 @@ if [[ "$opcao" == "2" ]]; then
 fi
 
 clear
+
+if [[ "$opcao" == "3" ]]; then
+    hacking=$(dialog --clear --stdout --title "Hacking" \
+    --menu "Escolha uma subcategoria:" 0 0 0 \
+    1 "Hydra" \
+    2 "John The Ripper" \
+    3 "Metaspolit" \
+    4 "Nmap" \
+    5 "SQLMap" \
+    6 "Wireshark"\
+    7 "ProtonVPN")
+
+    clear
+
+    case "$hacking" in
+        1) bash Hydra.sh ;;
+        2) bash JohnTheRipper.sh ;;
+        3) bash Metasploit.sh ;;
+        4) bash Nmap.sh ;;
+        5) bash SQLMap.sh ;;
+        6) bash Wireshark.sh ;;
+        7) bash ProtonVPN.sh ;;
+    esac
+fi
+
+clear
