@@ -1,86 +1,81 @@
-# Linux Tools
+# 🧰 LinuxTools
 
-O **Linux Tools** é um gerenciador de pacotes criado para facilitar a instalação de programas comumente usados em ambientes Linux. Conta com ferramentas de **desenvolvimento**, **internet**, **design e multimídia**, **hacking** e muito mais, todos disponíveis para instalação com apenas um clique, automatizando tarefas e tornando a experiência mais prática para desenvolvedores e usuários em geral.
-
----
-
-### Lista de programas disponíveis para instalação:
+**LinuxTools** é um instalador interativo de softwares para sistemas baseados em Debian (como Ubuntu e derivados). Com uma interface simples utilizando `dialog`, ele permite que você escolha entre diversas categorias e subcategorias de programas, automatizando a instalação de ferramentas essenciais para desenvolvedores, designers, gamers, hackers e administradores de sistemas.
 
 ---
 
-### 🧱 1. Desenvolvimento
+## 🖥️ Compatibilidade
 
-#### Linguagens de Programação
-- `openjdk-21-jdk` – Kits de desenvolvimento Java.
-- `nodejs`, `npm` – Ambiente JavaScript e seu gerenciador de pacotes.
-- `gcc`, `g++` – Compiladores C e C++.
+> ✅ Este script foi desenvolvido **exclusivamente** para distribuições **baseadas em Debian**, como:
 
+- Ubuntu
+- Linux Mint
+- Pop!_OS
+- Zorin OS
+- Debian
 
-#### 📝 IDEs e Editores
-- `code` – Visual Studio Code, editor moderno e extensível.
-- `jetbrains-toolbox` – Instalador e atualizador de IDEs JetBrains.
-- `eclipse` – IDE para JAVA
-
-#### 🗃️ Banco de Dados
-- `mysql-server` – Banco de dados MySQL/MariaDB e cliente.
-- `postgresql`, `pgadmin4` – Banco de dados PostgreSQL e interface gráfica.
+⚠️ O uso em distribuições não baseadas em Debian pode causar falhas na instalação dos pacotes.
 
 ---
 
-### 🌐 2. Internet
+## 📂 Categorias e Aplicativos Disponíveis
 
-#### 🌍 Navegadores
-- `chrome` - Navegador mais utilizado do mundo.
-- `opera` – Navegadores da Opera (GX é voltado para gamers).
-- `brave` – Navegador com bloqueador de anúncios embutido.
+### 1. Desenvolvimento
+- **Banco de Dados**: MySQL Server, MySQL Workbench, PostgreSQL, PgAdmin  
+- **IDEs**: Visual Studio Code, Eclipse, JetBrains Toolbox, Spring Tool Suite (STS)  
+- **Linguagens de Programação**: C/C++, Java, Node.js
 
-#### ✉️ Redes Sociais
-- `telegram-desktop` – Cliente oficial do Telegram.
-- `discord` – Comunicação por voz, texto e vídeo em comunidades.
+### 2. Design e Multimídia
+- **Áudio**: Audacity, VLC  
+- **Foto**: GIMP  
+- **Vídeo e Transmissão**: OBS Studio, Shotcut  
 
----
+### 3. Hacking
+- Hydra  
+- John The Ripper  
+- Metasploit  
+- Nmap  
+- SQLMap  
+- Wireshark  
+- ProtonVPN  
 
-### 🕵️ 3. Hacking
+### 4. Internet
+- **Navegadores**: Brave, Google Chrome, Opera  
+- **Redes Sociais**: Discord, Telegram  
 
-- `nmap` – Varredura de redes e portas.
-- `wireshark` – Sniffer gráfico de pacotes de rede.
-- `sqlmap` – Testes de injeção SQL.
-- `hydra` – Ataques de força bruta.
-- `john` – Quebra de senhas com dicionário.
-- `metasploit-framework` – Plataforma de testes de exploração.
-- `proton vpn` – Plataforma gratis de vpn
+### 5. Jogos
+- EA Sports Launcher  
+- Epic Games Launcher  
+- Steam  
 
-
----
-
-### 🎨 4. Design e Multimídia
-
-#### 🖼️ Edição de Imagem e Vetor
-- `gimp` – Editor de imagens avançado.
-
-#### 🎥 Edição de Vídeo e Transmissão
-- `obs-studio` – Transmissão ao vivo e gravação.
-- `shotcut` – Editor de vídeo simples e multiplataforma.
-
-#### 🎧 Edição e Reprodução de Áudio
-- `audacity` – Editor de áudio.
-- `vlc` – Reprodutor multimídia versátil.
+### 6. Servidores e Containers
+- Docker  
+- VirtualBox  
+- XAMPP  
 
 ---
 
-### 🎮 5. Jogos e Emuladores
+## ▶️ Como Executar
 
-#### 🎮 Plataformas e Lançadores
-- `steam` – Plataforma de jogos da Valve.
-- `epic` – Plataforma de jogos com games gratis toda semana.
-- `ea sports` – Plataforma da ea
+### ✅ Pré-requisitos:
+Tenha o `dialog` instalado:
+```bash
+sudo apt update && sudo apt install dialog -y
+```
 
----
+## 🔧 Passos para execução
 
-### 📡 6. Servidores e Containers
-- `xampp` – Linux, Apache, Mysql, Pearl e Php
-- `docker.io`, `docker-compose` – Contêineres.
-- `virtual-box` – Cria máquinas virtuais.
+### 1. Clone o repositório:
+```bash
+git clone https://github.com/grsantos56/LinuxTools.git
+cd LinuxTools
+chmod +x Instalador.sh
+./Instalador.sh
+```
 
----
+## 📌 Observações
+- Todos os scripts de instalação estão organizados em subpastas por categoria.
 
+- Ideal para uso em pós-instalação de sistema ou para configurar rapidamente seu ambiente de trabalho.
+
+- Sinta-se à vontade para contribuir com novos scripts ou melhorias!
