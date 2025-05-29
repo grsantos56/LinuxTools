@@ -69,3 +69,51 @@ if [[ "$opcao" == "1" ]]; then
   fi
 fi
 
+clear
+
+if [[ "$opcao" == "2" ]]; then
+  sub_opcao=$(dialog --clear --stdout --title "Design e Multimídia" \
+    --menu "Escolha uma subcategoria:" 0 0 0 \
+    1 "Audio" \
+    2 "Foto" \
+    3 "Video")
+
+  clear
+
+  if [[ "$sub_opcao" == "1" ]]; then
+    audio=$(dialog --clear --stdout --title "Audio" \
+      --menu "Escolha uma opção para instalar:" 0 0 0 \
+      1 "Audacity" \
+      2 "VLC")
+
+    clear
+    case "$audio" in
+      1) bash Audacity.sh ;;
+      2) bash VLC.sh ;;
+    esac
+
+  elif [[ "$sub_opcao" == "2" ]]; then
+    foto=$(dialog --clear --stdout --title "Foto" \
+      --menu "Escolha um editor de fotos para instalar:" 0 0 0 \
+      1 "GIMP")
+
+    clear
+    case "$foto" in
+      1) bash Gimp.sh ;;
+    esac
+
+  elif [[ "$sub_opcao" == "3" ]]; then
+    video=$(dialog --clear --stdout --title "Vídeo e Transmissão" \
+      --menu "Escolha uma opção para instalar:" 0 0 0 \
+      1 "OBS" \
+      2 "ShotCut")
+
+    clear
+    case "$video" in
+      1) bash "OBS.sh" ;;
+      2) bash "Shotcut.sh" ;;
+    esac
+  fi
+fi
+
+clear
