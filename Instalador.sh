@@ -181,3 +181,22 @@ if [[ "$opcao" == "4" ]]; then
 fi
 
 clear
+
+if [[ "$opcao" == "5" ]]; then
+    jogos=$(dialog --clear --stdout --title "Jogos" \
+    --menu "Escolha uma subcategoria:" 0 0 0 \
+    1 "EA Sports" \
+    2 "Epic" \
+    3 "Steam")
+
+    clear
+
+    case "$hacking" in
+        1) bash EaSports.sh ;;
+        2) bash Epic.sh ;;
+        3) bash Steam.sh ;;
+    esac
+fi
+
+clear
+
