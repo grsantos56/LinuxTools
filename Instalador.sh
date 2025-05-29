@@ -191,7 +191,7 @@ if [[ "$opcao" == "5" ]]; then
 
     clear
 
-    case "$hacking" in
+    case "$jogos" in
         1) bash EaSports.sh ;;
         2) bash Epic.sh ;;
         3) bash Steam.sh ;;
@@ -200,3 +200,23 @@ fi
 
 clear
 
+if [[ "$opcao" == "6" ]]; then
+    servidor=$(dialog --clear --stdout --title "Servidores e Containers" \
+    --menu "Escolha uma subcategoria:" 0 0 0 \
+    1 "Docker" \
+    2 "Virtual Box" \
+    3 "Xampp")
+
+    clear
+
+    case "$servidor" in
+        1) bash docker.sh ;;
+        2) bash VirtualBox.sh ;;
+        3) bash Xampp.sh ;;
+    esac
+fi
+
+# Mensagem de conclusão
+dialog --clear --msgbox "Instalação concluída!" 0 0
+
+clear
