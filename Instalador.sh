@@ -143,3 +143,41 @@ if [[ "$opcao" == "3" ]]; then
 fi
 
 clear
+
+if [[ "$opcao" == "4" ]]; then
+  sub_opcao=$(dialog --clear --stdout --title "Internet" \
+    --menu "Escolha uma subcategoria:" 0 0 0 \
+    1 "Navegadores" \
+    2 "Redes Sociais")
+
+  clear
+
+  if [[ "$sub_opcao" == "1" ]]; then
+    navegadores=$(dialog --clear --stdout --title "Navegadores" \
+      --menu "Escolha uma opção para instalar:" 0 0 0 \
+      1 "Brave" \
+      2 "Chrome" \
+      3 "Opera")
+
+    clear
+    case "$audio" in
+        1) bash Brave.sh ;;
+        2) bash opera.sh ;;
+        3) bash Opera.sh ;;
+    esac
+
+  elif [[ "$sub_opcao" == "2" ]]; then
+    redes=$(dialog --clear --stdout --title "Redes Sociais" \
+      --menu "Escolha um editor de fotos para instalar:" 0 0 0 \
+      1 "Discord" \
+      2 "Telegram")
+
+    clear
+    case "$redes" in
+        1) bash Discord.sh ;;
+        2) bash Telegram.sh ;;
+    esac
+  fi
+fi
+
+clear
